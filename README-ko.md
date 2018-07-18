@@ -160,6 +160,7 @@ VR_CLASSIFIERS=OilPipeCondition_1063693116
 FUNCTIONS_APIHOST=
 FUNCTIONS_AUTHORIZATION=
 ```
+> __주의__: 신임정보 편집시 `.env` 파일을 편집하세요
 
 #### setup_functions.sh 실행
 
@@ -225,6 +226,8 @@ applications:
   - {visual-recognition-service}
 ```
 
+> __주의__: 여기에서 service는 cloudfoundry의 service입니다. 
+
 Visual Recognition 서비스의 별칭으로 클라우드 파운드리 서비스를 생성합니다:
 ```
 ibmcloud resource service-alias-create "{visual-recognition-service}" --instance-name "{visual-recognition-service}" -s Dev
@@ -235,6 +238,9 @@ ibmcloud resource service-alias-create "{visual-recognition-service}" --instance
 bx app push YOUR_APP_NAME
 ```
 
+#### IBM Cloud Functions 설정
+> __추가내용__: IBM Cloud Functions 가 업데이트 되었습니다. 이에 따라, 추가적인 설정이 필요합니다. 
+* [Catalogue] - [Functions] - [Web Action]- [Enabled] 확인
 
 #### 애플리케이션
 <p align="center">
